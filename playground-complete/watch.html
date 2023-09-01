@@ -8,31 +8,33 @@
 </head>
 <body>
   <div id="app">
-    {{ num }}
+    {{num}}
     <button v-on:click="addNum">increase</button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
     new Vue({
-      el: '#app',
-      data: {
+      el:"#app",
+      data:{
         num: 10
       },
-      watch: {
-        num: function() {
+      watch:{
+        num: function(){
           this.logText();
         }
       },
-      methods: {
-        addNum: function() {
-          this.num = this.num + 1;
+      methods:{
+        addNum: function(){
+          this.num++;
         },
-        logText: function() {
+        logText:function(){
           console.log('changed');
         }
+
       }
-    })
+    });
+
   </script>
 </body>
 </html>
