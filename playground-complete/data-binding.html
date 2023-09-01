@@ -23,6 +23,8 @@
       <div v-else>
         test user has been logged in
       </div>
+      <input v-model="message" placeholder="edit me" />
+      <p>message: {{message}}</p>
       
   </div>
 
@@ -37,7 +39,8 @@
         num: 10,
         uuid: 'abc1234',
         name: 'text-blue',
-        loading: true
+        loading: true,
+        message: ''
       },
       computed:{
         doubleNum: function(){
